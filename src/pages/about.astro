@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="关于我 | 你的名字" current="about">
+  <h1>关于我</h1>
+
+  <div class="placeholder-note">
+    占位内容：请按下方结构替换为真实信息，注意涉密内容脱敏。
+  </div>
+
+  <div class="prose">
+    <!-- TODO: 个人简介，3-5 句话即可 -->
+    <p>
+      我是一名前端工程师，目前就职于 XX 公司，主要负责 XX 方向。
+      平时关注组件化、工程化与开发体验，喜欢在博客记录踩坑与总结。
+    </p>
+
+    <h2>工作经历</h2>
+    <ul>
+      <!-- TODO: 按时间倒序列经历：公司 / 职位 / 时间 / 一句话职责 -->
+      <li><strong>XX 公司 · 前端工程师</strong>（2023 - 至今）：负责 PC 组件库与业务前台开发</li>
+      <li><strong>XX 公司 · 前端实习生</strong>（2022 - 2023）：参与管理后台建设</li>
+    </ul>
+
+    <h2>技能清单</h2>
+    <ul>
+      <!-- TODO: 按「熟练 / 了解」分组，避免罗列过多关键词 -->
+      <li>熟练：Vue、TypeScript、Vite、组件库设计</li>
+      <li>了解：Node.js、Rust、CI/CD</li>
+    </ul>
+
+    <h2>简历下载</h2>
+    <!-- TODO: 把脱敏后的简历 PDF 放到 public/ 目录，再启用下面的链接 -->
+    <p>简历 PDF（脱敏版）即将上线。</p>
+  </div>
+</Base>

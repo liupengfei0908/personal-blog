@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+
+// 新文章只要在 src/pages/blog/ 下新建 .md 文件即可自动出现在列表中
+const posts = Object.values(import.meta.glob('./*.md', { eager: true })).sort(
+  (a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+);
+---
+
+<Base title="博客 | 你的名字" current="blog">
+  <h1>博客</h1>
+  <ul class="post-list">
+    {posts.map((post) => (
+      <li>
+        <a class="post-title" href={post.url}>{post.frontmatter.title}</a>
+        <div class="post-meta">{post.frontmatter.date} · {post.frontmatter.category}</div>
+      </li>
+    ))}
+  </ul>
+</Base>

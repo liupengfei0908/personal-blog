@@ -1,0 +1,15 @@
+---
+import Base from './Base.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Base title={`${frontmatter.title} | 你的名字`} current="blog">
+  <article class="prose">
+    <h1>{frontmatter.title}</h1>
+    <p style="color: var(--color-text-secondary); font-size: 13px; margin-top: -8px;">
+      {frontmatter.date} · {frontmatter.category}
+    </p>
+    <slot />
+  </article>
+</Base>

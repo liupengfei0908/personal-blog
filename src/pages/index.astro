@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="首页 | 你的名字" current="home">
+  <div class="placeholder-note">
+    占位内容：本页所有文字均为示例，搜索代码中的 TODO 注释可找到全部待替换位置。
+  </div>
+
+  <section class="hero">
+    <!-- TODO: 一句话定位 —— 你是谁、做什么、能为访客提供什么 -->
+    <h1>你好，我是你的名字，一名前端工程师</h1>
+    <p class="lead">
+      专注于 Web 前端与组件化架构，目前正在做组件库与低代码平台相关的工作。
+      这里记录我的项目、文章与思考。
+    </p>
+    <p>
+      <a href="/works/">看看我的作品 →</a>
+      &nbsp;&nbsp;
+      <a href="/about/">了解更多关于我 →</a>
+    </p>
+  </section>
+
+  <h2 class="section-title">核心技能</h2>
+  <!-- TODO: 替换为你自己的技能标签 -->
+  <div>
+    <span class="tag">Vue / React</span>
+    <span class="tag">TypeScript</span>
+    <span class="tag">组件库设计</span>
+    <span class="tag">低代码平台</span>
+    <span class="tag">前端工程化</span>
+  </div>
+
+  <h2 class="section-title">精选作品</h2>
+  <div class="card-grid">
+    <a class="card" href="/works/">
+      <h3>作品一：组件库项目</h3>
+      <p>一句话说明这个项目解决了什么问题、你在其中的角色与成果。</p>
+    </a>
+    <a class="card" href="/works/">
+      <h3>作品二：低代码模板</h3>
+      <p>一句话说明这个项目解决了什么问题、你在其中的角色与成果。</p>
+    </a>
+  </div>
+
+  <h2 class="section-title">最新文章</h2>
+  <ul class="post-list">
+    <li>
+      <a class="post-title" href="/blog/first-post/">我的博客开张了</a>
+      <div class="post-meta">2026-09-28 · 随笔</div>
+    </li>
+    <li>
+      <a class="post-title" href="/blog/frontend-notes/">前端工程化学习笔记</a>
+      <div class="post-meta">2026-09-20 · 技术</div>
+    </li>
+  </ul>
+</Base>

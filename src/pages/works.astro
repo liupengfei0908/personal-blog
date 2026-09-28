@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+
+// TODO: 替换为你的真实项目。每个项目四要素：背景 / 职责 / 成果 / 链接
+const works = [
+  {
+    name: '项目一：企业级组件库',
+    description: '背景：团队组件重复建设。职责：负责 decorator 布局与 slot 渲染体系。成果：接入 N 个业务组件，视觉回归减少。',
+    tags: ['Vue', '组件化'],
+    link: '#',
+  },
+  {
+    name: '项目二：低代码模板平台',
+    description: '背景：页面交付效率低。职责：负责 loading 统一方案与请求层改造。成果：试点组件接入，交互一致性提升。',
+    tags: ['低代码', '工程化'],
+    link: '#',
+  },
+  {
+    name: '项目三：个人开源小工具',
+    description: '背景：自己的效率需求。职责：独立开发。成果：GitHub 开源，解决某类具体问题。',
+    tags: ['开源', '工具'],
+    link: '#',
+  },
+];
+---
+
+<Base title="作品集 | 你的名字" current="works">
+  <h1>作品集</h1>
+
+  <div class="placeholder-note">
+    占位内容：在 works.astro 顶部的 works 数组中维护项目，只放可公开内容，涉密项目做脱敏描述。
+  </div>
+
+  <div class="card-grid">
+    {works.map((work) => (
+      <a class="card" href={work.link}>
+        <h3>{work.name}</h3>
+        <p>{work.description}</p>
+        <div>
+          {work.tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+      </a>
+    ))}
+  </div>
+</Base>
